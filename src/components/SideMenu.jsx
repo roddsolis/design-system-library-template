@@ -14,15 +14,15 @@ const SideMenu = () => {
   return (
     <div className="SideMenuContainer">
       <div className="Category" onClick={() => setSeeItems(!seeItems)}>
-        foundations{" "}
+        <Link href={"/foundations"}>foundations</Link>
         {!seeItems ? <ChevronRight size={16} /> : <ChevronDown size={16} />}
       </div>
       <div
         className="SubCategoryItems"
         style={{ display: seeItems ? "block" : "none" }}
       >
-        <Link href="/colores">colores</Link>
-        <Link href="/tipografia">tipografia</Link>
+        <Link href="/foundations/colores">colores</Link>
+        <Link href="/foundations/tipografia">tipografia</Link>
       </div>
     </div>
   );

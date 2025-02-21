@@ -10,3 +10,13 @@ a {
   display: block;
   text-decoration: none;
 }
+
+body {
+  background-color: aqua;
+  height: 100vh;
+}
+
+.HomeContainer {
+  display: flex;
+  height: 100%;
+}
