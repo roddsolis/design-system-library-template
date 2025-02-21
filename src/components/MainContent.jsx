@@ -1,4 +1,4 @@
-import "@/components/MainContent-style.css";
+import "@/components/MainContent-style.scss";
 
 const MainContent = ({ children }) => {
   return <div className="MainContent">{children}</div>;
