@@ -1,7 +1,8 @@
-import React from "react";
+"use client";
+import TipografiaMDX from "@/app/content/foundations/tipografia.mdx";
 
 const Tipografia = () => {
-  return <div>Tipografia</div>;
+  return <TipografiaMDX />;
 };
 
 export default Tipografia;

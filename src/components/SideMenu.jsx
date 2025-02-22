@@ -15,7 +15,11 @@ const SideMenu = () => {
     <div className="SideMenuContainer">
       <div className="Category" onClick={() => setSeeItems(!seeItems)}>
         <Link href={"/foundations"}>foundations</Link>
-        {!seeItems ? <ChevronRight size={16} /> : <ChevronDown size={16} />}
+        {/* {!seeItems ? <ChevronRight size={16} /> : <ChevronDown size={16} />} */}
+        <ChevronRight
+          size={16}
+          className={`chevron ${seeItems ? "rotate" : ""}`}
+        />
       </div>
       <div
         className="SubCategoryItems"

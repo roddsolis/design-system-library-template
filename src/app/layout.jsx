@@ -1,4 +1,5 @@
 import SideMenu from "@/components/SideMenu";
+import MainContent from "@/components/MainContent";
 import "@/app/styles/global.scss";
 
 export default function RootLayout({ children }) {
@@ -7,7 +8,7 @@ export default function RootLayout({ children }) {
       <body>
         <div className="HomeContainer">
           <SideMenu />
-          <div className="MainContent">{children}</div>
+          <MainContent>{children}</MainContent>
         </div>
       </body>
     </html>

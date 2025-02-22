@@ -1,7 +1,13 @@
-import React from "react";
+"use client";
+
+import ColoresMDX from "@/app/content/foundations/colores.mdx";
 
 const Colores = () => {
-  return <div>Colores</div>;
+  return (
+    <div>
+      <ColoresMDX />
+    </div>
+  );
 };
 
 export default Colores;
