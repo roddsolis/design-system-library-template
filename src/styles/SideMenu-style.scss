@@ -1,15 +1,15 @@
 .SideMenuContainer {
   width: auto;
-  background-color: rgb(87, 87, 87);
   display: flex;
   flex-direction: column;
   padding: 2em;
   transition: 1s ease-in-out;
+  grid-column: 1 / 3;
+  grid-row: 2 / 3;
 
   .SubCategoryItems {
     display: flex;
     flex-direction: column;
-    animation: expandir 1s ease-in-out;
   }
 
   .Category {
@@ -17,12 +17,11 @@
     justify-content: space-between;
     align-items: center;
   }
-}
+  .chevron {
+    transition: transform 0.1s ease-in-out;
+  }
 
-.chevron {
-  transition: transform 0.1s ease-in-out;
-}
-
-.rotate {
-  transform: rotate(90deg);
+  .rotate {
+    transform: rotate(90deg);
+  }
 }

@@ -7,19 +7,22 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "build-tokens": "node splitTokens.js && node build-tokens.js"
   },
   "dependencies": {
     "@contentlayer/core": "^0.3.4",
     "@mdx-js/loader": "^3.1.0",
     "@mdx-js/react": "^3.1.0",
     "@next/mdx": "^15.1.7",
+    "@tokens-studio/sd-transforms": "^1.2.9",
     "lucide-react": "^0.475.0",
     "next": "13.5.8",
     "next-mdx-remote": "^5.0.0",
     "react": "^18",
     "react-dom": "^18",
-    "sass": "^1.85.0"
+    "sass": "^1.85.0",
+    "style-dictionary": "^4.3.3"
   },
   "devDependencies": {
     "eslint": "^8",

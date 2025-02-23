@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import "@/components/SideMenu-style.scss";
 import { ChevronRight, ChevronDown } from "lucide-react";
 
 const SideMenu = () => {
@@ -15,7 +14,6 @@ const SideMenu = () => {
     <div className="SideMenuContainer">
       <div className="Category" onClick={() => setSeeItems(!seeItems)}>
         <Link href={"/foundations"}>foundations</Link>
-        {/* {!seeItems ? <ChevronRight size={16} /> : <ChevronDown size={16} />} */}
         <ChevronRight
           size={16}
           className={`chevron ${seeItems ? "rotate" : ""}`}
