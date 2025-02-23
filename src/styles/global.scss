@@ -1,8 +1,9 @@
+@import "./variables.scss";
 @import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
 @import "./MainContent-style.scss";
 @import "./SideMenu-style.scss";
 @import "./Header.scss";
-@import "./variables.scss";
+@import "./Footer.scss";
 
 * {
   padding: 0;
@@ -27,6 +28,7 @@ body {
   font-optical-sizing: auto;
   height: 100vh;
   color: $color-text-primary;
+  background-color: $color-background-default;
   h1 {
     font: $font-scale-title-l;
   }
@@ -57,4 +59,28 @@ body {
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 72px 1fr 24px;
   height: 100%;
+  padding: $padding-s $padding-s 0 $padding-s;
+}
+
+/* Personaliza la barra de desplazamiento */
+::-webkit-scrollbar {
+  width: 8px; /* Ancho del scroll (para el scroll vertical) */
+  height: 12px; /* Alto del scroll (para el scroll horizontal) */
+}
+
+/* Personaliza el fondo de la barra de desplazamiento */
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+/* Personaliza el pulgar del scroll */
+::-webkit-scrollbar-thumb {
+  background-color: $color-surface-strong;
+  border-radius: 10px;
+}
+
+/* Personaliza el pulgar del scroll cuando está en hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: $color-surface-strong;
 }

@@ -1,5 +1,12 @@
+import Footer from "./Footer";
+
 const MainContent = ({ children }) => {
-  return <div className="MainContent">{children}</div>;
+  return (
+    <div className="MainContent">
+      <div className="Content">{children}</div>
+      <Footer />
+    </div>
+  );
 };
 
 export default MainContent;
