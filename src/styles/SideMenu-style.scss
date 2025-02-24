@@ -2,26 +2,64 @@
   width: auto;
   display: flex;
   flex-direction: column;
-  padding: 2em;
+  padding: 1em;
   transition: 1s ease-in-out;
   grid-column: 1 / 3;
   grid-row: 2 / 4;
-
-  .SubCategoryItems {
-    display: flex;
-    flex-direction: column;
-  }
 
   .Category {
     display: flex;
     justify-content: space-between;
     align-items: center;
-  }
-  .chevron {
-    transition: transform 0.1s ease-in-out;
+    width: 100%;
+    background-color: $color-surface-default;
+    padding: $padding-m;
+    border-radius: $border-radius-container-s;
+
+    a {
+      font: $font-scale-button-m;
+    }
+    .chevron {
+      transition: transform 0.1s ease-in-out;
+    }
+    .rotate {
+      transform: rotate(90deg);
+    }
   }
 
-  .rotate {
-    transform: rotate(90deg);
+  .Category:hover {
+    background-color: $color-surface-brand-subdued;
+    a {
+      color: $color-text-brand;
+    }
+    transition: 0.1s ease-in-out;
+  }
+  .Category:active {
+    background-color: $color-surface-medium;
+    a {
+      color: $color-text-brand;
+    }
+    transition: 0.1s ease-in-out;
+  }
+  .SubCategoryItems {
+    display: flex;
+    flex-direction: column;
+    padding: 0 $padding-m 0 $padding-m;
+    border-left: $border-default-subdued;
+    margin-left: $padding-m;
+  }
+
+  .SubCategoryItems a {
+    padding-bottom: $spacing-vertical-s;
+    font: $font-scale-button-m;
+    color: $color-text-primary;
+  }
+  .SubCategoryItems a:last-child {
+    padding-bottom: 0em;
+  }
+
+  .SubCategoryItems a:hover {
+    color: $color-text-brand;
+    transition: 0.1s ease-in-out;
   }
 }

@@ -1,10 +1,19 @@
-import nextMdx from "@next/mdx";
+const { withContentlayer } = require("next-contentlayer");
 
-/** @type {import('next').NextConfig} */
-const config = {
-  pageExtensions: ["js", "jsx", "ts", "tsx", "md", "mdx"],
-};
+module.exports = withContentlayer({
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.mdx$/,
+      use: [
+        {
+          loader: "@mdx-js/loader",
+          options: {
+            // Aquí puedes agregar configuraciones específicas si las necesitas
+          },
+        },
+      ],
+    });
 
-export default nextMdx({
-  extension: /\.mdx?$/,
-})(config);
+    return config;
+  },
+});
