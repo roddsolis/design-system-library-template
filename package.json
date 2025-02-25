@@ -21,7 +21,9 @@
     "next-contentlayer": "^0.3.4",
     "react": "^18",
     "react-dom": "^18",
+    "rehype-pretty-code": "^0.14.0",
     "sass": "^1.85.0",
+    "shiki": "^3.0.0",
     "style-dictionary": "^4.3.3"
   },
   "devDependencies": {

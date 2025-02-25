@@ -2,7 +2,7 @@ import { defineDocumentType, makeSource } from "contentlayer/source-files";
 
 export const Page = defineDocumentType(() => ({
   name: "Page",
-  filePathPattern: "**/*.mdx", // Ajustamos para que tome desde la carpeta content
+  filePathPattern: "**/*.mdx",
   contentType: "mdx",
   fields: {
     title: { type: "string", required: true },
@@ -15,7 +15,31 @@ export const Page = defineDocumentType(() => ({
   },
 }));
 
+const rehypeoptions = {
+  theme: "one-dark-pro",
+  keepBackground: true,
+  onVisitLine(node) {
+    if (node.children.length === 0) {
+      node.children = [{ type: "text", value: " " }];
+    }
+  },
+  onVisitHighlightedLine(node) {
+    node.properties.className.push("highlighted");
+  },
+  onVisitHighlightedWord(node) {
+    node.properties.className = ["word"];
+  },
+};
+
 export default makeSource({
-  contentDirPath: "content", // Ahora apunta a la nueva ubicación
+  contentDirPath: "content",
   documentTypes: [Page],
+  mdx: {
+    rehypePlugins: [
+      async () => {
+        const rehypePrettyCode = (await import("rehype-pretty-code")).default;
+        return [rehypePrettyCode, rehypeoptions];
+      },
+    ],
+  },
 });

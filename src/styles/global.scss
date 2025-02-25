@@ -4,7 +4,6 @@
 @import "./SideMenu-style.scss";
 @import "./Header.scss";
 @import "./Footer.scss";
-
 * {
   padding: 0;
   margin: 0;
@@ -18,9 +17,15 @@ a {
   text-decoration: none;
   font: $font-scale-paragraph-normal-l;
   text-transform: capitalize;
+  color: $color-text-primary;
 }
 a:visited {
   color: $color-text-primary;
+}
+
+html,
+body {
+  background-color: #ffffff !important;
 }
 
 body {
@@ -28,30 +33,30 @@ body {
   font-optical-sizing: auto;
   height: 100vh;
   color: $color-text-primary;
-  background-color: $color-background-default;
-  h1 {
-    font: $font-scale-title-l;
-  }
-  h2 {
-    font: $font-scale-title-m;
-  }
-  h3 {
-    font: $font-scale-title-s;
-  }
-  h4 {
-    font: $font-scale-subtitles-l;
-  }
-  h5 {
-    font: $font-scale-subtitles-m;
-  }
-  h6 {
-    font: $font-scale-subtitles-s;
-  }
+}
 
-  p {
-    font: $font-scale-paragraph-normal-l;
-    color: $color-text-secondary;
-  }
+h1 {
+  font: $font-scale-title-l;
+}
+h2 {
+  font: $font-scale-title-m;
+}
+h3 {
+  font: $font-scale-title-s;
+}
+h4 {
+  font: $font-scale-subtitles-l;
+}
+h5 {
+  font: $font-scale-subtitles-m;
+}
+h6 {
+  font: $font-scale-subtitles-s;
+}
+
+p {
+  font: $font-scale-paragraph-normal-l;
+  color: $color-text-secondary;
 }
 
 .HomeContainer {
