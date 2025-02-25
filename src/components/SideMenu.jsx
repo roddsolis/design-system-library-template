@@ -1,47 +1,68 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Link from "next/link";
-import { ChevronRight, ChevronDown } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import { allPages } from "contentlayer/generated"; // Importa todas las páginas generadas por Contentlayer
 
 const SideMenu = () => {
-  const [seeItems, setSeeItems] = useState(false);
+  const [openCategories, setOpenCategories] = useState({});
 
-  useEffect(() => {
-    setSeeItems(false);
-  }, []);
+  // Organizar las páginas en categorías y subcategorías
+  const categories = {};
+
+  allPages.forEach((page) => {
+    let [category, subcategory] = page._raw.flattenedPath.split("/");
+
+    // Eliminar números al inicio de la categoría (ej. "01-foundations" → "foundations")
+    category = category.replace(/^\d+-/, "");
+
+    // Capitalizar la primera letra
+    const formattedCategory =
+      category.charAt(0).toUpperCase() + category.slice(1);
+
+    if (!categories[formattedCategory]) {
+      categories[formattedCategory] = [];
+    }
+
+    categories[formattedCategory].push({
+      title: page.title,
+      path: `/${page._raw.flattenedPath}`,
+    });
+  });
 
   return (
     <div className="SideMenuContainer">
-      <div className="Category" onClick={() => setSeeItems(!seeItems)}>
-        <Link href={"/foundations"}>foundations</Link>
-        <ChevronRight
-          size={16}
-          className={`chevron ${seeItems ? "rotate" : ""}`}
-        />
-      </div>
+      {Object.entries(categories).map(([category, subcategories]) => (
+        <div key={category}>
+          <div
+            className="Category"
+            onClick={() =>
+              setOpenCategories((prev) => ({
+                ...prev,
+                [category]: !prev[category],
+              }))
+            }
+          >
+            <Link href={`/${category.toLowerCase()}`}>{category}</Link>
+            <ChevronRight
+              size={16}
+              className={`chevron ${openCategories[category] ? "rotate" : ""}`}
+            />
+          </div>
 
-      <div
-        className="SubCategoryItems"
-        style={{ display: seeItems ? "block" : "none" }}
-      >
-        {/* Mapea las rutas de las páginas generadas por Contentlayer */}
-        {allPages
-          .filter((page) => page._raw.flattenedPath.startsWith("foundations"))
-          .map((page) => {
-            const subcategory = page._raw.flattenedPath.split("/")[1]; // Obtiene la subcategoría del slug
-            return (
-              <Link
-                key={page._raw.flattenedPath}
-                href={`/${page._raw.flattenedPath}`}
-              >
-                {subcategory}{" "}
-                {/* Aquí mostramos el nombre de la subcategoría */}
+          <div
+            className="SubCategoryItems"
+            style={{ display: openCategories[category] ? "block" : "none" }}
+          >
+            {subcategories.map((sub) => (
+              <Link key={sub.path} href={sub.path}>
+                {sub.title}
               </Link>
-            );
-          })}
-      </div>
+            ))}
+          </div>
+        </div>
+      ))}
     </div>
   );
 };

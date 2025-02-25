@@ -1,9 +1,8 @@
-// contentlayer.config.js
 import { defineDocumentType, makeSource } from "contentlayer/source-files";
 
 export const Page = defineDocumentType(() => ({
   name: "Page",
-  filePathPattern: "**/*.mdx", // Apunta a todos los archivos .mdx en tu carpeta de contenido
+  filePathPattern: "**/*.mdx", // Ajustamos para que tome desde la carpeta content
   contentType: "mdx",
   fields: {
     title: { type: "string", required: true },
@@ -11,12 +10,12 @@ export const Page = defineDocumentType(() => ({
   computedFields: {
     url: {
       type: "string",
-      resolve: (page) => `/${page._raw.flattenedPath}`,
+      resolve: (page) => `/${page._raw.flattenedPath.replace("content/", "")}`,
     },
   },
 }));
 
 export default makeSource({
-  contentDirPath: "src/app/content", // Ruta a tus archivos .mdx
-  documentTypes: [Page], // Asegúrate de usar el tipo de documento adecuado
+  contentDirPath: "content", // Ahora apunta a la nueva ubicación
+  documentTypes: [Page],
 });
