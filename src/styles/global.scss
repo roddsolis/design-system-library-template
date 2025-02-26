@@ -1,0 +1,92 @@
+@import "./variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
+@import "./MainContent-style.scss";
+@import "./SideMenu-style.scss";
+@import "./Header.scss";
+@import "./Footer.scss";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  shape-rendering: geometricPrecision;
+  text-rendering: geometricPrecision;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  font: $font-scale-paragraph-normal-l;
+  text-transform: capitalize;
+  color: $color-text-primary;
+}
+a:visited {
+  color: $color-text-primary;
+}
+
+html,
+body {
+  background-color: #ffffff !important;
+}
+
+body {
+  font-family: "Figtree", serif;
+  font-optical-sizing: auto;
+  height: 100vh;
+  color: $color-text-primary;
+}
+
+h1 {
+  font: $font-scale-title-l;
+}
+h2 {
+  font: $font-scale-title-m;
+}
+h3 {
+  font: $font-scale-title-s;
+}
+h4 {
+  font: $font-scale-subtitles-l;
+}
+h5 {
+  font: $font-scale-subtitles-m;
+}
+h6 {
+  font: $font-scale-subtitles-s;
+}
+
+p {
+  font: $font-scale-paragraph-normal-l;
+  color: $color-text-secondary;
+}
+
+.HomeContainer {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 72px 1fr 24px;
+  height: 100%;
+  padding: $padding-s $padding-s 0 $padding-s;
+}
+
+/* Personaliza la barra de desplazamiento */
+::-webkit-scrollbar {
+  width: 8px; /* Ancho del scroll (para el scroll vertical) */
+  height: 12px; /* Alto del scroll (para el scroll horizontal) */
+}
+
+/* Personaliza el fondo de la barra de desplazamiento */
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+/* Personaliza el pulgar del scroll */
+::-webkit-scrollbar-thumb {
+  background-color: $color-surface-strong;
+  border-radius: 10px;
+}
+
+/* Personaliza el pulgar del scroll cuando está en hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: $color-surface-strong;
+}
