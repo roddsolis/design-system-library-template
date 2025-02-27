@@ -1,0 +1,35 @@
+@import "./variables.scss";
+
+.content-items {
+  display: flex;
+  flex-wrap: wrap;
+  padding: $padding-4xl 0;
+  gap: $spacing-horizontal-m;
+  .colorSample-container {
+    display: flex;
+    flex-direction: column;
+    padding: $padding-s;
+    border: $border-default-subdued;
+    border-radius: $border-radius-container-l;
+    width: fit-content;
+    box-shadow: $shadow-low-emphasis;
+    background-color: $color-surface-default;
+    .color-container {
+      border: $border-default-subdued;
+      padding: $padding-3xl;
+      background-color: $color-surface-default;
+      border-radius: $border-radius-container-m;
+      p {
+        color: $color-text-primary;
+        mix-blend-mode: difference;
+      }
+    }
+
+    .colorData-container {
+      padding: $padding-s;
+      p:nth-child(2) {
+        color: $color-text-primary;
+      }
+    }
+  }
+}

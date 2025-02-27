@@ -1,0 +1,14 @@
+@import "./variables.scss";
+
+.breadcrumb-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: $spacing-vertical-s;
+  color: $color-text-disabled;
+  padding-bottom: $padding-4xl;
+  a {
+    font: $font-scale-paragraph-medium-s;
+    color: $color-text-secondary;
+  }
+}

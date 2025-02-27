@@ -10,11 +10,4 @@
   border-radius: $border-radius-container-l $border-radius-container-l 0 0;
   border: $border-default-subdued;
   overflow-y: scroll;
-
-  .Content {
-    width: 100%;
-    height: 100%;
-    padding: $padding-4xl;
-    gap: $spacing-vertical-2xl;
-  }
 }

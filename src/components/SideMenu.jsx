@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
 import { allPages } from "contentlayer/generated"; // Importa todas las páginas generadas por Contentlayer
-
 const SideMenu = () => {
   const [openCategories, setOpenCategories] = useState({});
 

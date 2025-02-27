@@ -2,63 +2,303 @@
 title: Colores
 ---
 
-# Encabezado Principal
+<BreadCrumb />
 
-## Subtítulo H2
+# Sistema de colores
 
-### Subtítulo H3
+###### Colores primarios
 
-Esto es un **párrafo en negrita**, _cursiva_ y ~~tachado~~. También podemos usar `código en línea`.
+Esta escala de colores representa al color principal del sistema, con el cual se deben resaltar las acciones principales dentro de la interfaz de una manera sutil y equilibrada. Para no generar elementos de distracción dentro de una pantalla. La aplicación de esta escala debe estar relacionada con elementos tales como: Botones primarios, radio buttons, checkboxes, textos destacados, componentes de carga, etc.
 
----
+<ColorPalette
+  systemColors={[
+    {
+      colorName: "brand",
+      contrastInfo: "contraste",
+      colorNumber: 50,
+      colorValue: "#F8F7FF",
+    },
+    {
+      colorName: "brand",
+      contrastInfo: "contraste",
+      colorNumber: 100,
+      colorValue: "#EBE8FF",
+    },
+    {
+      colorName: "brand",
+      contrastInfo: "contraste",
+      colorNumber: 200,
+      colorValue: "#CAC7F9",
+    },
+    {
+      colorName: "brand",
+      contrastInfo: "contraste",
+      colorNumber: 300,
+      colorValue: "#9294EC",
+    },
+    {
+      colorName: "brand",
+      contrastInfo: "contraste",
+      colorNumber: 400,
+      colorValue: "#5B62DA",
+    },
+    {
+      colorName: "brand",
+      contrastInfo: "contraste",
+      colorNumber: 500,
+      colorValue: "#43419F",
+    },
+  ]}
+/>
 
-## 🔗 Enlaces
+###### Colores Neutros
 
-[Enlace a Google](https://www.google.com)  
-[Enlace interno](/foundations/colores)
+Los colores neutrales son los que deben tener mayor presencia en la interfaz, ya que estas tonalidades lograran general la jerarquía necesaria para destacar las acciones principales de una pantalla. esta escala debe ser aplicada a títulos, párrafos, fondos, superficies, sombras, etc.
 
----
+<ColorPalette
+  systemColors={[
+    {
+      colorName: "Neutral",
+      contrastInfo: "contraste",
+      colorNumber: 0,
+      colorValue: "#FFFFFF",
+    },
+    {
+      colorName: "Neutral",
+      contrastInfo: "contraste",
+      colorNumber: 50,
+      colorValue: "#F9FAFB",
+    },
+    {
+      colorName: "Neutral",
+      contrastInfo: "contraste",
+      colorNumber: 100,
+      colorValue: "#F1F4F8",
+    },
+    {
+      colorName: "Neutral",
+      contrastInfo: "contraste",
+      colorNumber: 200,
+      colorValue: "#E1E7EF",
+    },
+    {
+      colorName: "Neutral",
+      contrastInfo: "contraste",
+      colorNumber: 300,
+      colorValue: "#C3D0DF",
+    },
+    {
+      colorName: "Neutral",
+      contrastInfo: "contraste",
+      colorNumber: 400,
+      colorValue: "#A2B5CD",
+    },
+    {
+      colorName: "Neutral",
+      contrastInfo: "contraste",
+      colorNumber: 500,
+      colorValue: "#5D6F85",
+    },
+    {
+      colorName: "Neutral",
+      contrastInfo: "contraste",
+      colorNumber: 600,
+      colorValue: "#343F4B",
+    },
+    {
+      colorName: "Neutral",
+      contrastInfo: "contraste",
+      colorNumber: 700,
+      colorValue: "#2A323C",
+    },
+    {
+      colorName: "Neutral",
+      contrastInfo: "contraste",
+      colorNumber: 800,
+      colorValue: "#20272F",
+    },
+    {
+      colorName: "Neutral",
+      contrastInfo: "contraste",
+      colorNumber: 900,
+      colorValue: "#191E24",
+    },
+  ]}
+/>
 
-## 📷 Imágenes
+###### Colores semánticos
 
-![Alt de la imagen](https://via.placeholder.com/600x300 "Título de la imagen")
+Los colores semánticos son muy importantes dentro del sistema porque ayudaran al usuario a comprender la respuesta del sistema ante una acción determinada. Las tonalidades **azules** sirven para indicar alguna información importante sobre un proceso o acción, el color **rojo** indicara los errores que puede generar el proceso o acción y que pueden ser destructivos, el **amarillo** advierte sobre un proceso o acción que no es destructiva y por ultimo el color **verde** que ayuda al usuario a entender cuando un proceso finaliza con éxito.
 
----
+<div className="colorPaletteGroup">
 
-## 📝 Listas
+<ColorPalette
+  systemColors={[
+    {
+      colorName: "Info",
+      contrastInfo: "contraste",
+      colorNumber: 100,
+      colorValue: "#EEF8FF",
+    },
+    {
+      colorName: "Info",
+      contrastInfo: "contraste",
+      colorNumber: 200,
+      colorValue: "#DCF0FF",
+    },
+    {
+      colorName: "Info",
+      contrastInfo: "contraste",
+      colorNumber: 300,
+      colorValue: "#BAE0FF",
+    },
+    {
+      colorName: "Info",
+      contrastInfo: "contraste",
+      colorNumber: 400,
+      colorValue: "#97D1FF",
+    },
+    {
+      colorName: "Info",
+      contrastInfo: "contraste",
+      colorNumber: 500,
+      colorValue: "#52B2FF",
+    },
+    {
+      colorName: "Info",
+      contrastInfo: "contraste",
+      colorNumber: 600,
+      colorValue: "#0074D2",
+    },
+  ]}
+/>
+<p>**Aplicación**: todo lo que sea informativo para el usuario. Ejemplo: cambio de políticas de uso para los usuario o información sobre horarios de apertura y cierre.</p>
+<ColorPalette
+  systemColors={[
+    {
+      colorName: "Success",
+      contrastInfo: "contraste",
+      colorNumber: 100,
+      colorValue: "#EAFAF2",
+    },
+    {
+      colorName: "Success",
+      contrastInfo: "contraste",
+      colorNumber: 200,
+      colorValue: "#D5F3E4",
+    },
+    {
+      colorName: "Success",
+      contrastInfo: "contraste",
+      colorNumber: 300,
+      colorValue: "#ABE8C9",
+    },
+    {
+      colorName: "Success",
+      contrastInfo: "contraste",
+      colorNumber: 400,
+      colorValue: "#81DCAF",
+    },
+    {
+      colorName: "Success",
+      contrastInfo: "contraste",
+      colorNumber: 500,
+      colorValue: "#2DC579",
+    },
+    {
+      colorName: "Success",
+      contrastInfo: "contraste",
+      colorNumber: 600,
+      colorValue: "#1B8650",
+    },
+  ]}
+/>
+<p>**Aplicación**: cualquier acción o proceso que termina con exito o se cumple alguna condicion. Ejemplo: pago de cuenta exitoso o una carga de archivo completada.</p>
+<ColorPalette
+  systemColors={[
+    {
+      colorName: "Warning",
+      contrastInfo: "contraste",
+      colorNumber: 100,
+      colorValue: "#FFF8E9",
+    },
+    {
+      colorName: "Warning",
+      contrastInfo: "contraste",
+      colorNumber: 200,
+      colorValue: "#FFEFD3",
+    },
+    {
+      colorName: "Warning",
+      contrastInfo: "contraste",
+      colorNumber: 300,
+      colorValue: "#FEDFA7",
+    },
+    {
+      colorName: "Warning",
+      contrastInfo: "contraste",
+      colorNumber: 400,
+      colorValue: "#FED07A",
+    },
+    {
+      colorName: "Warning",
+      contrastInfo: "contraste",
+      colorNumber: 500,
+      colorValue: "#FDB022",
+    },
+    {
+      colorName: "Warning",
+      contrastInfo: "contraste",
+      colorNumber: 600,
+      colorValue: "#9E6701",
+    },
+  ]}
+/>
+<p>**Aplicación**: cualquier acción o proceso que el usuario decide hacer por su propia voluntad y que puede significar algún cambio no esperado. Ejemplo: Modificación de un plan mas barato a uno mas caro o generar cambio en el sistema y los datos no están guardados.</p>
+<ColorPalette
+  systemColors={[
+    {
+      colorName: "Error",
+      contrastInfo: "contraste",
+      colorNumber: 100,
+      colorValue: "#FFEFEE",
+    },
+    {
+      colorName: "Error",
+      contrastInfo: "contraste",
+      colorNumber: 200,
+      colorValue: "#FEDFDC",
+    },
+    {
+      colorName: "Error",
+      contrastInfo: "contraste",
+      colorNumber: 300,
+      colorValue: "#FDBEBA",
+    },
+    {
+      colorName: "Error",
+      contrastInfo: "contraste",
+      colorNumber: 400,
+      colorValue: "#FB9E97",
+    },
+    {
+      colorName: "Error",
+      contrastInfo: "contraste",
+      colorNumber: 500,
+      colorValue: "#F95D52",
+    },
+    {
+      colorName: "Warning",
+      contrastInfo: "contraste",
+      colorNumber: 600,
+      colorValue: "#B4271F",
+    },
+  ]}
+/>
+<p>**Aplicación**: cualquier acción o proceso que rompa algo o corte un flujo. Ejemplo: un proceso de compra fallido o un usuario no ingreso una contraseña valida.</p>
+</div >
 
-### Lista ordenada
-
-1. Primer ítem
-2. Segundo ítem
-3. Tercer ítem
-
-### Lista desordenada
-
-- Opción 1
-- Opción 2
-- Opción 3
-
----
-
-## 📊 Tablas
-
-| Col 1 | Col 2 |
-| ----- | ----- |
-| val 1 | val 2 |
-| val 3 | val 4 |
-
----
-
-## 📌 Citas
-
-> "Esto es una cita en bloque" – Anónimo
-
----
-
-## 💻 Código
-
-```js
-const mensaje = "Hola, MDX!";
-console.log(mensaje);
-```
+<div className="comment-container">
+  <a href={"http://"}>Deja un comentario</a> <span>|</span>
+  <a href={"http://"}>Edita esta página</a>
+</div>

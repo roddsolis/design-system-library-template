@@ -8,6 +8,19 @@ import Codeblock from "../../src/components/CodeBlock";
 
 descripción del componente de alerta
 
+<br />
+
 ```js
-console.log("hola mundo");
+const Alert = ({ alertText, alertIcon }) => {
+  const icons = ["alert"];
+  return (
+    <div className="alertcontainer">
+      {alertText}
+      {alertIcon}
+    </div>
+    // comentario del bloque de código
+  );
+};
+
+export default Alert;
 ```
