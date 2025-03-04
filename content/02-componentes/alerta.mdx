@@ -6,9 +6,14 @@ import Codeblock from "../../src/components/CodeBlock";
 
 # Componente de alerta
 
-descripción del componente de alerta
+##### Alertas
 
-<br />
+Las alertas informan a los usuarios sobre eventos importantes en la plataforma. Pueden presentarse de dos formas, dependiendo del contexto:
+
+- Fijas en la interfaz cuando requieren la atención del usuario para continuar, como errores en formularios o advertencias críticas.
+- Temporales y flotantes cuando confirman acciones o muestran mensajes de estado, desapareciendo automáticamente tras unos segundos.
+
+  Su diseño y comportamiento deben adaptarse al flujo para garantizar que la información sea clara sin interrumpir innecesariamente la experiencia del usuario.
 
 ```js
 const Alert = ({ alertText, alertIcon }) => {

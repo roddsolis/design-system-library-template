@@ -1,5 +1,4 @@
 .MainContent {
-  background-color: $color-surface-subdued;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -9,5 +8,6 @@
   width: 100%;
   border-radius: $border-radius-container-l $border-radius-container-l 0 0;
   border: $border-default-subdued;
-  overflow-y: scroll;
+  overflow-y: auto;
+  background-color: $color-background-alternative;
 }

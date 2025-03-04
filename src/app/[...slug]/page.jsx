@@ -2,7 +2,7 @@
 import { allPages } from "contentlayer/generated";
 import { notFound } from "next/navigation";
 import { useMDXComponent } from "next-contentlayer/hooks";
-import { MDXProvider } from "@mdx-js/react";
+// import { MDXProvider } from "@mdx-js/react";
 import "../../styles/codeblock.scss";
 import "../../styles/mdx-style.scss";
 import BreadCrumb from "@/components/BreadCrumb.jsx";
